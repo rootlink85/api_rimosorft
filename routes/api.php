@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Ejemplo 1
+//Route::resource('posts','Api\PostController')->except(['create','edit']);
+
+//Ejemplo 2
+//Route::resource('posts','Api\PostController')->only(['create','edit']);
+
+//Ejemplo 3
+
+//Route::apiResource('posts','Api\PostController');
