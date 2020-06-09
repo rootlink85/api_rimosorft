@@ -37,7 +37,10 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        //enlace implicito
+        //debe de coincidir el nombre del parametro con la variables que recibimos
+
+        return $post;
     }
 
     /**
