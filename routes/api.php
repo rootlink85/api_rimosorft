@@ -14,12 +14,7 @@ use Illuminate\Http\Request;
 |
 */
 
-//Ejemplo 1
-//Route::resource('posts','Api\PostController')->except(['create','edit']);
+//tokens = sistemas externos
 
-//Ejemplo 2
-//Route::resource('posts','Api\PostController')->only(['create','edit']);
 
-//Ejemplo 3
 
-//Route::apiResource('posts','Api\PostController');

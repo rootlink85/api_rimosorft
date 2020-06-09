@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('api/posts','Api\PostController');
+
+Route::group([''=>'api'],function(){
+
+    Route::apiResource('posts','Api\PostController');
+});
+
+
