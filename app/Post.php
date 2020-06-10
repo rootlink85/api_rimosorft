@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+
+    /*
     protected $hidden = ['title','body'];
 
     protected $appends = ['post_name','post_excerpt'];
@@ -21,7 +23,8 @@ class Post extends Model
             substr($this->body,0,240)
         ). '...';
     }
+    */
 
 
-    //{{$post->post_name }} blade
+
 }

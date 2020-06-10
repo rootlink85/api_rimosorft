@@ -33,14 +33,24 @@ class PostController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
+     * @return Post
      */
     public function show(Post $post)
     {
-        //enlace implicito
-        //debe de coincidir el nombre del parametro con la variables que recibimos
 
-        return $post;
+            return $post;
+
+
+        /**
+
+        return [
+          'id' => $post->id,
+          'post_name' => strtoupper($post->title),
+          'post_body' => strtoupper(substr($post->body,0,240)). '...'
+        ];
+
+
+         */
     }
 
     /**
