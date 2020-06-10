@@ -7,6 +7,10 @@ use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Resources\Post as PostResources;
 use App\Http\Requests\Post as PostRequests;
+use App\Http\Resources\PostCollection;
+
+
+
 
 class PostController extends Controller
 {
@@ -22,11 +26,21 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return PostCollection
      */
     public function index()
     {
-        //
+        //ejemplo 1
+        //return Post::get();
+        //eejmplo 2
+        //return $this->post->orderBy('id','desc')->get();
+
+        return response()->json(
+            new PostCollection(
+                $this->post->orderBy('id','desc')->get()
+            )
+        );
+
     }
 
     /**
