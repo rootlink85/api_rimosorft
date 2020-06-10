@@ -15,6 +15,6 @@ use Illuminate\Http\Request;
 */
 
 //tokens = sistemas externos
-
+Route::apiResource('posts','Api\PostController');
 
 
